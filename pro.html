@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Pricing</title>
+     
+    
+    <style>
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #03102c;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #03102c;
+            color: #fff;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .package {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 30%;
+            margin: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: rgb(94, 91, 91);
+        }
+
+        .toggle {
+            background-color: rgb(6, 40, 114);
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .details {
+            text-align: center;
+            display: none;
+            margin-top: 10px;
+        }
+
+        .a {
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration-style: none;
+            /* color: white; */
+        }
+        .btn{
+            padding: 0;
+            width: 60px;
+            height: 32px;
+            background-color: rgb(6,40,114);
+            border-radius: 4px;
+            
+        }
+        .btn a {
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Choose Your Pricing Plan</h1>
+        <p>Turn your product into a growth engine.</p>
+    </header>
+
+    <section class="pricing">
+        <div class="package">
+            <h2>Basic Package</h2>
+            <p class="price">$19.99/month</p>
+            <button class="toggle" onclick="toggleDetails(this)">Toggle Details</button>
+            <div class="details">
+                <p>7 Day Trial</p>
+                <p>Essential features</p>
+                <p>Limited Usage</p>
+            </div>
+
+            <button class="btn"><a href="./signup.html" target="_blank">Sign Up</a></button>
+
+            
+        </div>
+
+        <div class="package">
+            <h2>Pro Package</h2>
+            <p class="price">$39.99/month</p>
+            <button class="toggle" onclick="toggleDetails(this)">Toggle Details</button>
+            <div class="details">
+                <p>Extented Features</p>
+                <p>Flexible Usage Limit</p>
+                <p>Priority Support</p>
+                <p>Dicounts For Annual Billing</p>
+            </div>
+
+            <button class="btn"><a href="./signup.html" target="_blank">Sign Up</a></button>
+
+        </div>
+
+        <div class="package">
+            <h2>Premium Package</h2>
+            <p class="price">$59.99/month</p>
+            <button class="toggle" onclick="toggleDetails(this)">Toggle Details</button>
+            <div class="details">
+                <p>Advanced Features</p>
+                <p>Unlimited Usage</p>
+                <p>24/7 Support</p>
+                <p>Exclusive Access</p>
+                <p>Customization Options</p>
+            </div>
+
+            <button class="btn"><a href="./signup.html" target="_blank">Sign Up</a></button>
+
+        </div>
+    </section>
+
+    <script>
+        function toggleDetails(button) {
+            var details = button.nextElementSibling;
+            details.style.display = details.style.display === "none" ? "block" : "none";
+        }
+    </script>
+
+</body>
+
+</html>
